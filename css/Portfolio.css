@@ -1,0 +1,220 @@
+
+body{
+    margin:0;
+    background-color: rgb(208, 223, 246);
+    background-repeat:repeat;
+    background-size:auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.circle{
+    background-color: lightcyan;
+    text-align: center;
+    width:50px;
+    height:50px; 
+    position: absolute;
+    border:10px solid lightcyan;
+    border-radius: 50%;
+    margin:5px;
+    animation-name: circle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes circle{
+    0%{
+        border-color:paleturquoise; transform: scale(1);
+    }
+
+    25%{
+        border-color:lightblue; transform: scale(1.1);
+    }
+
+    50%{
+        border-color: aquamarine; transform: scale(1.3);
+    }
+
+    75%{
+        border-color:cadetblue; transform: scale(1.1);
+    }
+
+    100%{
+        border-color:lightgrey; transform: scale(1)
+    }
+}
+
+.rubrik{
+    font-size: 30px;
+    text-align:center;
+    width:50vh;
+    margin-top: 15px;
+}
+
+.profil{
+    border: 1px solid black;
+    border-radius: 60%;
+    display: block;
+    width: auto;
+    height: 35vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.innehåll{
+    display: block;
+    margin-top:30px;
+    margin-bottom: 30px;
+    padding:10px;
+    text-align: justify;
+}
+
+.bild{
+    border:1px solid black;
+    border-radius:10%;
+    display: block;
+    width:auto;
+    height:45vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box{
+    display: block;
+    margin-top:20px;
+    padding:10px;
+}
+
+h5{
+    padding:10px;
+    text-align: justify;
+}
+
+p{
+    padding:10px;
+    word-spacing:1px;
+    text-align: justify;
+}
+
+.text-box, .text-box1, .text-box2{
+
+    margin-bottom: 30px;
+    padding-bottom: 20px;;
+    border:2px solid white;
+    border-radius:10%;
+}
+
+.link-container, .text-box, .text-box1, .text-box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-container, a:visited {
+    background-color: lightskyblue;
+    padding: 10px 20px;
+    color:black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10%;
+}
+
+.link-container:hover, a:active {
+    background-color: rgb(159, 159, 164);
+}
+
+aside{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;        
+    gap:40px;  
+    width:100%; 
+    background-color:lightyellow;
+    transition: background-color 1s linear; 
+}
+
+aside:hover{
+    background-color:rgb(173, 218, 248);
+}
+
+footer{
+    background-color: rgb(243, 249, 255);
+    margin-top:30px;
+    padding:5px;   
+}
+
+@media screen and (min-width: 768px){
+
+    .container{
+        width:100%;
+    }
+
+    .circle{
+        position: relative;
+        margin-left: 90%;
+        margin-top:10px;    
+    }
+
+    .rubrik{
+        font-size: 65px;
+        width:30%;
+    }
+
+    .profil{
+
+        margin-top:5px;
+        margin-left:60px;
+    }
+
+    .innehåll{
+
+        font-size: 15px;
+        margin-top:-270px;
+        margin-left:260px;
+        padding:70px;
+    }
+
+    .bild{
+        margin-top:-60px;
+        margin-right:20px;
+    }
+    .text-box{
+        background-color: white;
+        transition: background-color 1s linear; 
+        border-radius:10px;
+        margin-top:-235px;
+        margin-bottom:50px;
+        margin-right:400px;
+    }
+
+    .text-box:hover{
+        background-color:rgb(173, 218, 248);
+    }
+
+    .text-box1, .text-box2{
+        background-color:white;
+        transition: background-color 1s linear; 
+        border-radius:10px;
+        margin-right: 10px;
+    }
+
+    .text-box1:hover{
+        background-color:rgb(173, 218, 248);
+    }
+
+    .text-box2:hover{
+        background-color:rgb(173, 218, 248); 
+    }
+
+    aside{
+        font-size: 30px;
+        justify-content: space-evenly;
+    }
+}
